@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>FCC Dungeon Crawler By Kunle Adeyinka</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' href='css/style.css' />
     <script src='https://unpkg.com/react@15.3.2/dist/react.js'></script>
     <script src='https://unpkg.com/react-dom@15.3.2/dist/react-dom.js'></script>
@@ -20,37 +20,40 @@
                return(
                  <div>
                    <div className="container">
+                      <nav className="navbar navbar-default">
+                          <div className="container-fluid">
+                             <div className="navbar-header">
+                               <h1>Free Code Camp ReactJS Project - Build A Dungeon Crawler</h1>
+                             </div>
+                          </div>
+                      </nav>
+                      <hr/>
                       <div className="row">
-                          <div className="col left-col">
-                            <h2>FCC - Dungeon Crawler</h2>
-                          </div>
-                          <div className="col right-col">
-                              <button>Toggle Lights</button>
-                              <button>Reset</button>
-                          </div>
+                          <div className="col-md-1 text-center"><b>Health:</b><br />health</div>
+                          <div className="col-md-2 text-center"><b>Weapon:</b><br />weaponName</div>
+                          <div className="col-md-1 text-center"><b>Attack:</b><br />attack</div>
+                          <div className="col-md-1 text-center"><b>Level:</b><br />level</div>
+                          <div className="col-md-2 text-center"><b>Next Level:</b><br /> xp</div>
+                          <div className="col-md-1 text-center"><b>Dungeon:</b><br />1</div>
+                          <div className="col-md-2"><button className="btn btn-primary">Toggle Lights</button></div>
+                          <div className="col-md-1"><button className="btn btn-success">Reset</button></div>
+                      </div>
+                      <hr/>
+                      <div className="jumbotron">
+                        <BoardRowComponent />
                       </div>
 
-                      <div className="row scoreboard">
-                      <div className="col score"></div>
-                      <div className="col score"><b>Health:</b><br />health</div>
-                      <div className="col score"><b>Weapon:</b><br />weaponName</div>
-                      <div className="col score"><b>Attack:</b><br />attack</div>
-                      <div className="col score"><b>Level:</b><br />level</div>
-                      <div className="col score"><b>Next Level:</b><br />xp</div>
-                      <div className="col score"><b>Dungeon:</b><br />1</div>
-                      <div className="col score"></div>
-                      </div>
-                   </div>
-                   <div className="container">
-                      <BoardRowComponent />
                       <footer>
-                       <div className="foot">
-                         Kunle Adeyinka
-                       </div>
-                     </footer>
-                  </div>
+                        <div className="row text-center">
+                          <p>Made by Kunle Adeyinka.</p>
+                          <p>Contact me at <a href="mailto:aadeyink@gmail.com">aadeyink@gmail.com</a></p>
+                        </div>
+                      </footer>
 
-                </div>
+
+                   </div>
+
+                 </div>
                )
              }
            }
