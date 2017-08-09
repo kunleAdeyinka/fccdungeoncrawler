@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FCC Dungeon Crawler By Kunle Adeyinka</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
+    <script src='https://unpkg.com/react@15.3.2/dist/react.js'></script>
+    <script src='https://unpkg.com/react-dom@15.3.2/dist/react-dom.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.3/pako_inflate.min.js'></script>
+  </head>
+  <body>
+      <div id="app"></div>
+      <script type='text/babel'>
+
+           class DungeonCrawlerComponent extends React.Component {
+             render() {
+               return(
+                 <div>
+                   <div className="container">
+                      <div className="row">
+                          <div className="col left-col">
+                            <h2>FCC - Dungeon Crawler</h2>
+                          </div>
+                          <div className="col right-col">
+                              <button>Toggle Lights</button>
+                              <button>Reset</button>
+                          </div>
+                      </div>
+
+                      <div className="row scoreboard">
+                      <div className="col score"></div>
+                      <div className="col score"><b>Health:</b><br />health</div>
+                      <div className="col score"><b>Weapon:</b><br />weaponName</div>
+                      <div className="col score"><b>Attack:</b><br />attack</div>
+                      <div className="col score"><b>Level:</b><br />level</div>
+                      <div className="col score"><b>Next Level:</b><br />xp</div>
+                      <div className="col score"><b>Dungeon:</b><br />1</div>
+                      <div className="col score"></div>
+                      </div>
+                   </div>
+                   <div className="container">
+                      <BoardRowComponent />
+                      <footer>
+                       <div className="foot">
+                         Kunle Adeyinka
+                       </div>
+                     </footer>
+                  </div>
+
+                </div>
+               )
+             }
+           }
+
+           class BoardRowComponent extends React.Component {
+             render() {
+               return (<div className="row"><BoardCellComponent /></div>);
+             }
+           }
+
+           class BoardCellComponent extends React.Component {
+             render() {
+               return (<div>Board Cell</div>);
+             }
+           }
+           ReactDOM.render(
+             <DungeonCrawlerComponent />,
+             document.getElementById('app')
+           );
+      </script>
+
+  </body>
+</html>
