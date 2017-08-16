@@ -1,4 +1,6 @@
-.hudCol {
-  padding-right:0;
-   padding-left:0;
+.gameDisplay {
+  width: 801px;
+  height: 601px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
